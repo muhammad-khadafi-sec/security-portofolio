@@ -1,4 +1,4 @@
-# Bumba — GraphQL Schema Exposure via Error Handling + Partial Authorization Leakage
+# Bumba - GraphQL Schema Exposure via Error Handling + Partial Authorization Leakage
 
 **Status:** Submitted *(Closed as Informational)*  
 **Severity (Suggested):** Low/Medium  

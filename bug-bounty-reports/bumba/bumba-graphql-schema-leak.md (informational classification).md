@@ -42,6 +42,7 @@ query {
 
 Response:
 "Field 'users' of type '[User!]!' must have a selection of subfields. Did you mean 'users { ... }'?"
+
 ➡️ Confirms internal users field exists, even though it shouldn't be discoverable.
 
 ### Field Discovery via Failing Queries
@@ -55,6 +56,7 @@ query {
 
 Response:
 "Cannot query field 'id' on type 'User'."
+
 ➡️ The server leaks internal schema structure without introspection.
 
 ### Mutations Enumeration
@@ -64,6 +66,7 @@ mutation {
 
 Response:
 "Field 'updateUser' argument 'user_id' of type 'String!' is required."
+
 ➡️ Reveals required arguments and mutation naming conventions.
 
 Further fuzzing revealed internal mutation candidates including:
@@ -77,6 +80,7 @@ Further fuzzing revealed internal mutation candidates including:
 | no token | AUTH_GUARD_NO_JWT_FOUND_IN_HEADERS |
 | invalid token | AUTH_GUARD_JWT_TOKEN_NOT_AUTHORIZED |
 | valid token | Cannot query field ... (schema leak) |
+
 ➡️ This allows logical mapping of authorization layers.
 
 ### Impact

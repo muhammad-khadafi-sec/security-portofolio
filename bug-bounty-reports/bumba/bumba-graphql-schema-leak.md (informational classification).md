@@ -76,7 +76,8 @@ Further fuzzing revealed internal mutation candidates including:
  - delete_user
 
 ### Authorization Behavior Leakage
-| **Condition** | **API Responses** |
+| Condition | Authentication Required |
+|----------|-------------------------
 | no token | AUTH_GUARD_NO_JWT_FOUND_IN_HEADERS |
 | invalid token | AUTH_GUARD_JWT_TOKEN_NOT_AUTHORIZED |
 | valid token | Cannot query field ... (schema leak) |

@@ -1,4 +1,4 @@
-# <redacted> API — Unauthenticated POST Request Leading to Server Stall (DoS Vector)
+# <redacted> API - Unauthenticated POST Request Leading to Server Stall (DoS Vector)
 
 **Status:** Submitted *(pending re-evaluation)*  
 **Severity (Suggested):** Medium → High (DoS Potential)  

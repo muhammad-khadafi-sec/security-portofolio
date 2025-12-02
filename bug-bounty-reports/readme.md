@@ -51,7 +51,7 @@ This attack **does not require login**, meaning it can be triggered at scale.
 ### Payload Used
 
 ### Test Command
-```bash
+
 time curl -s -o /dev/null -X POST \
 "https://<redacted>.com/1/<redacted>/<redacted>/<redacted>" \
 -H "Content-Type: application/json" \
@@ -75,6 +75,8 @@ time curl -s -o /dev/null -X POST \
 | #1 | ~0.64s | Normal |
 | #2 | ~134.87s | Backend Stall |
 
+---
+
 ## Analysis
 
 The endpoint attempts to process payloads rather than validate or reject them, leading to unbounded processing time. Lack of:
@@ -85,20 +87,28 @@ The endpoint attempts to process payloads rather than validate or reject them, l
 
 makes this behavior exploitable at scale.
 
+---
+
 ## Expected Behavior
 
  - Reject unauthenticated POST requests
  - Apply rate limiting
  - Enforce payload validation
  - Fail fast (<100ms) instead of attempting processing
+   
+---
 
 ## Reference Standards
 
  - CWE-400 — Uncontrolled Resource Consumption
  - CWE-770 — Allocation Without Limits
  - OWASP API4:2023 — Unrestricted Resource Consumption
+   
+---
 
  ## Environment Notes
 
  - Stable connection (avg response time baseline: 15–16ms)
  - No tooling, botting, or load generation — single curl request triggers stalc
+
+---

@@ -1,91 +1,73 @@
 # 🛡️ Cybersecurity Portfolio
 
-Hi, I'm **Muhamamd Khadafi**, a security researcher and junior penetration tester with a focus on:
+Hi, I'm Muhammad Khadafi — a security researcher and junior penetration tester specializing in:
 
-- 🔍 API Security & Business Logic Testing  
-- 🧪 Black-Box Pentesting  
-- 🐛 Bug Bounty & Vulnerability Research  
-- ⚙️ Offensive Mindset + Methodology-Driven Testing  
+🧪 Black-Box Web Application Pentesting
+🔍 API Security & Business Logic Testing
+🐛 Bug Bounty & Vulnerability Research
 
-I enjoy finding vulnerabilities in real-world applications, writing structured reports, and continuously sharpening my skills through labs, real targets, and self-driven research.
+# ⚙️ Offensive Security Methodology & Recon
 
----
+I enjoy analyzing real-world applications, finding subtle logic flaws, and writing clear, structured vulnerability reports.
+My learning path is hands-on, practical, and research-driven.
 
-## 🚀 Skills & Focus Areas
+# 🚀 Skills & Focus Areas
+Category	Skills / Tools
+Web & API Security	OWASP ASVS, OWASP API Top 10, Burp Suite, Postman
+Pentesting	Linux, Recon, PrivEsc, Threat Modeling, Attack Surface Mapping
+Bug Bounty	HackerOne Workflow, Responsible Disclosure, Report Writing
+Scripting	Bash, Python (basic), automation logic
+Labs & CTF	Hack The Box, TryHackMe
 
-| Category | Tools / Frameworks / Expertise |
-|---------|--------------------------------|
-| Web & API Security | OWASP ASVS, OWASP API Top 10, Postman, Burp Suite |
-| Pentesting | Linux, Priv Esc, Recon, Exploit Development (Basic) |
-| Bug Bounty | HackerOne, Responsible Disclosure, Reporting |
-| Scripting | Bash, Python (basic), automation mindset |
-| Lab & CTF | HackTheBox, TryHackMe |
+# 📂 Portfolio Contents
 
----
+## 💰 1. Bug Bounty Journey
 
-## 📂 Portfolio Contents
+### /bug-bounty-reports
 
-### 🔥 1. Bug Bounty & Responsible Disclosure Reports
-Reports from real program findings (redacted for safety unless allowed):
+api-dos-escalation.md
+Submitted → validated as Informational, currently under review for PoC escalation.
 
-📁 /bug-bounty-reports
+error-driven-graphql-schema-discovery.md
+Submitted → Validated as Informational, GraphQL schema leak & authorization behavior exposure
 
-- flipkart-api-dos-escalation.md *(submitted, validated as informational—under review for escalated PoC impact)*
-- bumba-graphql-schema-leak.md *(informational classification)*
+✦ These reports demonstrate reconnaissance, API analysis, PoC construction, and professional reporting workflow.
 
-✦ *These demonstrate real reconnaissance, PoC design, and reporting methodology.*
+## 🎯 2. Pentesting Projects
 
----
+### 📁 /Pentesting-projects
 
-### 🛠️ 2. Pentesting Case Studies
+freelance-web-app-pentest-celoofficial.pdf
+Black-box assessment using OWASP methodologies: enumeration, validation, risk scoring, and reporting.
 
-📁 /pentest-project
+## 🔬 3. Lab Notes & Write-ups (HTB / THM)
 
-- freelance-web-app-pentest-celoofficial.pdf  
-*(Black-box methodology, OWASP-aligned reporting, exploit validation, risk rating.)*
+### 📁 /labs-writeups
 
----
+HTB – Oopsie
+Enumeration → misconfig exploitation → privilege escalation → lessons learned.
 
-### 🧪 3. Lab Reports (HTB / THM / TryHackMe)
+I use these documents to maintain consistency and track personal improvement.
 
-📁 /labs-writeups
+# 🧭 Current Mission
 
-- HTB - Oopsie 
-*(Enumeration, path to shell, privilege escalation, lessons learned.)*
+Sharpening offensive security skills through real-world testing, structured reporting, and continuous iteration.
 
----
+# 🌟 Goals:
 
-### 📚 4. Methodology & Notes
+🔄 Improve report quality & documentation
+🎯 Focus on impactful vulns (Auth bypass, IDOR/BOLA, GraphQL/API flaws, logic bugs)
+💼 Grow toward Pentester role / Red Team role
 
-📁 /methodology
 
-- OWASP_API_Checklist.md
-- Testing_Workflow_and_Tools.md
+# 📬 Contact
 
-I maintain these as personal documentation to ensure consistency and improvement.
+💼 LinkedIn: https://www.linkedin.com/in/muhammad-khadafi-2b5a5221b/
+🕵️ HackerOne: lovelessb0y
+✉️ Email: muhkhadua@gmail.com
 
----
+# 🧠 Closing Note
+Security isn't just about finding bugs — it's about understanding how systems fail, why they fail, and communicating those insights clearly.
 
-## 🧭 Current Mission
-
-> "Sharpening offensive security skills through real-world testing, structured reporting, and continuous learning."
-
-- 🔄 Always improving reporting quality
-- 🎯 Targeting more impactful vulnerabilities (auth bypass, IDOR, logic flaws, API weaknesses)
-- 💼 Preparing toward **Junior Security Engineer / Pentester role**
-
----
-
-## 📬 Contact
-
-- 💼 LinkedIn: https://www.linkedin.com/in/muhammad-khadafi-2b5a5221b/
-- 🕵️ HackerOne Profile: lovelessb0y
-- ✉️ Email: muhkhadua@gmail.com
-
----
-
-### 🧠 Closing Note
-
-> _Security isn't just finding bugs, it's understanding how systems break, why they break, and how to communicate that clearly._
-
-Thanks for reading - feel free to explore the repo.
+Thanks for reading.
+Feel free to explore the repository!

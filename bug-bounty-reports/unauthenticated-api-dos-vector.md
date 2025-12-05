@@ -1,7 +1,9 @@
 # Unauthenticated POST Request Causing Server Stall (Potential DoS Vector)
 
 **Status:** Submitted (pending re-evaluation from informational)
+
 **Severity (Suggested):** Medium → High (Application-Layer DoS Pontetial)  
+
 **Target Scope:** [Redacted] Bug Bounty Program from Hackerone
 
 ---

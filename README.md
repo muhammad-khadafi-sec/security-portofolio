@@ -3,7 +3,9 @@
 Hi, I'm Muhammad Khadafi — a security researcher and junior penetration tester specializing in:
 
 🧪 Black-Box Web Application Pentesting
+
 🔍 API Security & Business Logic Testing
+
 🐛 Bug Bounty & Vulnerability Research
 
 # ⚙️ Offensive Security Methodology & Recon
@@ -11,13 +13,64 @@ Hi, I'm Muhammad Khadafi — a security researcher and junior penetration tester
 I enjoy analyzing real-world applications, finding subtle logic flaws, and writing clear, structured vulnerability reports.
 My learning path is hands-on, practical, and research-driven.
 
-# 🚀 Skills & Focus Areas
-Category	Skills / Tools
-Web & API Security	OWASP ASVS, OWASP API Top 10, Burp Suite, Postman
-Pentesting	Linux, Recon, PrivEsc, Threat Modeling, Attack Surface Mapping
-Bug Bounty	HackerOne Workflow, Responsible Disclosure, Report Writing
-Scripting	Bash, Python (basic), automation logic
-Labs & CTF	Hack The Box, TryHackMe
+
+# 🚀 Focus Areas
+
+ - Web Application Pentesting (Black Box)
+
+ - API & Authentication Security Testing
+
+ - Business Logic & Access Control Analysis
+
+ - Reconnaissance & Attack Surface Mapping
+
+ - Red Team Development Path (Long-term)
+
+
+
+# 🧰 Skills
+
+## 🔹 Web & API Security
+
+ - OWASP ASVS, OWASP API Top 10
+
+ - API Recon, Endpoint Enumeration
+
+ - IDOR, BOLA, Logic Testing
+
+ - GraphQL Error-based Enumeration
+
+ - XSS, CSRF, SSRF, LFI/RFI (CTF experience)
+
+ - File Upload Bypass (CTF-level)
+   
+## 🔹 Pentesting Tools
+
+ - Burp Suite, Nmap, Gobuster
+
+ - Subdomain Enumeration
+
+ - Linux PrivEsc
+
+ - Parameter/Endpoint Fuzzing & Analysis
+
+## 🔹 Scripting
+
+ - Bash and Python (basic automation)
+
+## 🔹 Soft Skills
+
+ - Communication
+
+ - Teamwork
+
+ - High Offensive Security Mindset
+
+ - Analitycal and Critical Thinking
+
+ - Quick learner (hands-on & research-driven)
+
+ - Strong report writing
 
 # 📂 Portfolio Contents
 
@@ -56,15 +109,20 @@ Sharpening offensive security skills through real-world testing, structured repo
 # 🌟 Goals:
 
 🔄 Improve report quality & documentation
+
 🎯 Focus on impactful vulns (Auth bypass, IDOR/BOLA, GraphQL/API flaws, logic bugs)
+
 💼 Grow toward Pentester role / Red Team role
 
 
 # 📬 Contact
 
 💼 LinkedIn: https://www.linkedin.com/in/muhammad-khadafi-2b5a5221b/
+
 🕵️ HackerOne: lovelessb0y
+
 ✉️ Email: muhkhadua@gmail.com
+
 
 # 🧠 Closing Note
 Security isn't just about finding bugs — it's about understanding how systems fail, why they fail, and communicating those insights clearly.

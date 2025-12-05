@@ -1,0 +1,225 @@
+# 🧪 Hack The Box — *Oopsie* (Full Write-up)
+
+**Difficulty:** Easy  
+**Category:** Web Application → Privilege Escalation  
+**Focus:** Enumeration • Access Control • File Upload Abuse • PrivEsc  
+**Author:** Muhammad Khadafi  
+
+---
+
+## 📝 Overview
+
+*Oopsie* is a Hack The Box machine focused on demonstrating:
+
+- Web enumeration
+- Access control flaws (IDOR/BOLA)
+- Insecure file upload handling
+- Linux privilege escalation
+
+This write-up **does not include flags or exploit payloads** (HTB rules).  
+
+Purpose: **show pentesting methodology and thinking process**.
+
+---
+
+## 🔍 1. Reconnaissance
+
+### 1.1 Nmap Scan
+
+nmap -sC -sV -oN oopsie.scan <IP>
+
+
+**Results:**
+
+| Port | Service | Notes |
+|------|----------|--------|
+| 80/tcp | HTTP | Main attack surface |
+
+Only HTTP is open → web application becomes the primary focus.
+
+---
+
+## 🔎 2. Web Enumeration
+
+### 2.1 Initial Access
+
+The homepage displays a simple admin-themed interface.
+
+### 2.2 Directory Enumeration
+
+gobuster dir -u http://<IP> -w /usr/share/wordlists/dirb/common.txt
+
+Important discoveries:
+
+- `/administrator.php`
+- `/dashboard.php`
+- `/uploads/`
+- `/cdn-cgi/`
+
+`administrator.php` suggests restricted functionality.
+
+---
+
+## 🛑 3. Authentication & Access Control Testing
+
+The dashboard accepts a user-controlled parameter:
+
+/dashboard.php?user=1
+
+Testing different values reveals **changes in privilege level**.
+
+This indicates an access control flaw:
+
+### ⚠️ IDOR / BOLA (Insecure Direct Object Reference)
+
+- The server trusts the `user` parameter
+- Privileges change simply by modifying integers
+- No server-side validation of authorization
+
+This allows unauthorized access to admin pages.
+
+---
+
+## 🧰 4. Gaining Elevated Privileges
+
+By manipulating the `user` parameter:
+
+- Admin interface becomes accessible
+- Restricted menu options appear
+- File upload functionality becomes available
+
+Weak access control → application-level privilege escalation.
+
+---
+
+## 📤 5. File Upload Vector (High-Level Overview)
+
+The admin page includes an upload feature.
+
+Issues identified:
+
+- Weak or no file extension validation  
+- No MIME-type verification  
+- Uploaded files stored in executable directories  
+
+Result:  
+Uploaded files can be accessed and executed → **remote command execution possible**.
+
+*(Exploit details omitted per HTB rules)*
+
+---
+
+## ⬆️ 6. Privilege Escalation (Local)
+
+Once a foothold is obtained:
+
+### 6.1 Enumeration
+Check:
+
+- User groups  
+- File permissions  
+- Writable/executable scripts  
+
+### 6.2 Key Finding
+A root-owned script is **executable by a non-root user**, enabling abuse.
+
+### 6.3 Exploitation
+Misconfigured permissions allow the attacker to escalate privileges to root.
+
+(No exploit commands shown.)
+
+---
+
+## 🎯 7. Lessons Learned
+
+### Technical Takeaways
+
+- Parameter-based access control is insecure  
+- Always enforce server-side authorization checks  
+- File uploads must be validated and isolated from execution  
+- Linux privilege escalation often originates from simple permission mistakes  
+
+### Pentester Skills Demonstrated
+
+- Structured enumeration  
+- Logic & access control testing  
+- Parameter manipulation  
+- File upload exploitation  
+- PrivEsc methodology  
+- Clear reporting/documentation  
+
+---
+
+## 🧭 8. Conclusion
+
+*Oopsie* demonstrates a realistic full attack chain:
+
+1. Enumeration  
+2. IDOR / Access Control Bypass  
+3. Admin Access  
+4. File Upload Abuse  
+5. Remote Command Execution  
+6. Privilege Escalation → Root
+
+
+## 🎯 9. Lessons Learned
+
+### 🔹 **Technical Lessons**
+
+#### 1. **Never trust user-controlled identifiers**
+The machine demonstrates how simply changing `?user=1` to `?user=2` can bypass authorization.  
+Real systems often have the same flaw — known as IDOR/BOLA — one of the highest-impact API vulnerabilities today.
+
+#### 2. **Authorization must be enforced server-side**
+UI-based checks or hidden menu items mean nothing.  
+Privilege mapping and access checks must be validated at the backend every time.
+
+#### 3. **Upload functionality is extremely dangerous**
+Upload features must validate:
+
+- File type  
+- MIME type  
+- Content  
+- Storage location  
+- Execution permissions  
+
+Failing to handle one of these can lead directly to RCE.
+
+#### 4. **Executables with weak permissions are a PrivEsc goldmine**
+Many real-world PrivEsc cases come from misconfigured scripts owned by root but executable by users.  
+Principle of least privilege must be applied everywhere — including local scripts.
+
+#### 5. **Enumeration is everything**
+Most vulnerabilities in *Oopsie* are discovered simply by:
+
+- Observing URL structure  
+- Testing parameters  
+- Checking response behavior  
+- Inspecting file permissions  
+
+Pentesting is 70% recon, 30% exploitation.
+
+---
+
+### 🔹 **Pentester Mindset Lessons**
+
+#### 1. **Always question trust**  
+If the application trusts you too much, there's a vulnerability waiting.
+
+#### 2. **Small flaws chain into full compromises**  
+Individually, each issue seems harmless:  
+- user parameter  
+- weak upload  
+- misconfigured script  
+
+Together → Full system takeover.
+
+This is the essence of real-world pentesting: **chaining vulnerabilities**.
+
+#### 3. **Don't chase exploits — chase logic flaws**
+Technical exploits are fun, but logic flaws compromise entire systems with simpler effort.
+
+#### 4. **Consistency matters more than complexity**
+Even an “easy” machine teaches powerful lessons if approached methodically.
+
+---

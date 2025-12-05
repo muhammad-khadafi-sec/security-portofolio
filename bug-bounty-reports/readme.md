@@ -20,15 +20,20 @@ The purpose of this directory is to demonstrate:
 ### 1️⃣ Unauthenticated API DoS Vector
 
 File: unauthenticated-api-dos-vector.md
+
 Status: Submitted (pending re-evaluation)
+
 Severity (Suggested): Medium → High
+
 Summary:
 Unauthenticated POST endpoints were found to process unvalidated payloads, leading to backend stalls (~135 seconds). This enables application-layer DoS without authentication.
 
 ### 2️⃣ GraphQL Schema Exposure via Error Responses
 
 File: error-driven-graphql-schema-discovery.md
+
 Status: Closed as Informational
+
 Summary:
 GraphQL introspection was disabled, but verbose error messages exposed hidden schema fields, mutation requirements, and authorization behavior. Useful for attack surface mapping.
 

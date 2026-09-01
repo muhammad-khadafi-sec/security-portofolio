@@ -1,15 +1,3 @@
-# Muhammad Khadafi
-
-## Security Engineer
-
-Network & Cybersecurity Engineer focused on security architecture,
-infrastructure security, and security operations, with a strong
-background in web and API security research.
-
-I work across both defensive and offensive security, from designing
-secure network architectures and SOC environments to assessing
-application security and researching real-world vulnerabilities.
-
 ## Disclaimer
 
 The security assessments and research presented in this portfolio
@@ -82,57 +70,6 @@ and centralized security monitoring.
 
 ---
 
-### 🐧 GarudaVanguard
-
-Open-source Linux Security Hardening Assessment Framework
-implementing selected CIS Benchmark checks.
-
-**Focus Areas**
-
-- Linux security assessment
-- CIS-based hardening checks
-- Configuration validation
-- Security posture assessment
-- Automated security checks
-
-[View on GitHub](https://github.com/muhammad-khadafi-sec/GarudaVanguard)
-
----
-
-### 🔎 RedMind
-
-An offensive security toolkit focused on reconnaissance
-and attack-surface analysis.
-
-**Focus Areas**
-
-- Reconnaissance
-- Attack-surface discovery
-- Web security testing
-- Security research automation
-
-[View on GitHub](https://github.com/muhammad-khadafi-sec/RedMind)
-
----
-
-## Security Research
-
-I conduct independent web and API security research through
-authorized security testing and coordinated disclosure programs.
-
-### Research Areas
-
-- Web Application Security
-- API Security
-- Authentication & Authorization
-- Access Control / IDOR
-- Business Logic
-- GraphQL Security
-- JavaScript Analysis
-- Transaction & Payment Workflows
-
----
-
 ## Security Assessment Engagements
 
 Selected authorized security assessment case studies covering
@@ -171,41 +108,20 @@ Security assessment of a Roblox top-up platform.
 
 ---
 
-## Architecture & Security Engineering
+## Security Research
 
-My security engineering work focuses on designing practical
-security controls for distributed and mission-critical environments.
+Independent security research focused on web and API security,
+authorization, access control, and transaction workflows.
 
-### Areas
+**Research Areas**
 
-- Security Architecture
-- Network Security
-- Infrastructure Security
-- Zero Trust Architecture
-- Network Segmentation
-- SOC Architecture
-- Security Monitoring
-- Secure Communications
-- Threat Detection & Response
-
----
-
-## Offensive Security
-
-My offensive security experience focuses on manual testing and
-security research rather than automated scanning alone.
-
-### Areas
-
-- Web Application Penetration Testing
-- API Security Assessment
-- Authentication Testing
-- Authorization Testing
-- Access Control
-- Business Logic Testing
-- GraphQL Security Testing
-- Reconnaissance
-- Attack-Surface Analysis
+- Web & API Security
+- Authentication & Authorization
+- Access Control / IDOR
+- Business Logic
+- GraphQL Security
+- JavaScript Analysis
+- Payment & Transaction Workflows
 
 ---
 
@@ -225,6 +141,7 @@ security research rather than automated scanning alone.
 - Wireshark
 - VPN
 - Network Security Monitoring
+- Networking
 
 ### Security Operations
 
@@ -247,46 +164,5 @@ security research rather than automated scanning alone.
 - Python
 - Linux
 - Git
-- Networking
 
 ---
-
-## Typical Security Assessment Workflow
-
-```text
-Reconnaissance
-      ↓
-Attack-Surface Enumeration
-      ↓
-Authentication & Authorization Testing
-      ↓
-Input Validation Testing
-      ↓
-Business Logic Testing
-      ↓
-Manual Exploitation & Validation
-      ↓
-Impact Assessment
-      ↓
-Reporting & Remediation
-      ↓
-Post-Remediation Validation
-
-## Typical Security Assessment Workflow
-
-```text
-Security Requirements
-        ↓
-Threat & Risk Analysis
-        ↓
-Architecture Design
-        ↓
-Security Control Selection
-        ↓
-Technical Specification
-        ↓
-Integration Planning
-        ↓
-Monitoring & Detection
-        ↓
-Response & Continuous Improvement

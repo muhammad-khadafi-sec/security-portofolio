@@ -52,6 +52,7 @@ addProductsToBasket
       |
       v
 Basket B modified
+```
 
 ## Technical Observation
 

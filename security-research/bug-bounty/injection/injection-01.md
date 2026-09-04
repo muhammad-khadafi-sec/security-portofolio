@@ -49,7 +49,11 @@ POST /rest/v2/~/{cartId}/addresses/delivery
 2. Proceed to checkout.
 3. Intercept the shipping address request.
 4. Modify the mafLine1 parameter with attacker-controlled HTML. Example payload:
+
+```html
 <a href="https://www.evil.com">
+ ```   
+ 
 6. Submit the request.
 7. Refresh or revisit the checkout page.
 8. Observe that the supplied HTML is rendered as active markup.

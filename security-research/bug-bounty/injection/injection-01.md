@@ -41,6 +41,7 @@ JavaScript execution observed during testing and blocked by akamai WAF.
 
 ```http
 POST /rest/v2/~/{cartId}/addresses/delivery
+```
 
 ## Reproduction Overview
 

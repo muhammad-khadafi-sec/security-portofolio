@@ -7,7 +7,7 @@
 
 ## Submission Proof
 
-![Sanitized Submission Proof](./submission-proof-bb-access-control-01.jpg)
+![Sanitized Submission Proof](./submission-proof-bb-access-control-01.png)
 
 ## Summary
 

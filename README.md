@@ -30,7 +30,7 @@ generalized designs based on real-world security requirements.
 
 ## Featured Projects
 
-### 🛡️ Multi-Site SOC Architecture
+### Multi-Site SOC Architecture
 
 A centralized Security Operations Center architecture designed for
 distributed environments with centralized detection, enrichment,
@@ -50,7 +50,7 @@ investigation, and automated response.
 
 ---
 
-### 🔐 Zero Trust Security Architecture
+### Zero Trust Security Architecture
 
 A reference Zero Trust architecture for a segmented,
 mission-critical environment with identity-centric access control

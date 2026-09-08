@@ -2,12 +2,11 @@
 
 **Category:** Business Logic / Improper Server-Side Input Validation  
 **Platform:** Bug Bounty Research  
-**Status:** Not Applicable — Downstream Validation Prevented Completion
+**Status:** Not Applicable — Security Layer On Final Stage (Testing Limit)
 
 ## Submission Proof
 
-> **Business Logic Flaw — Ability to Manipulate Hotel Reservation Prices to Negative Values**  
-> **Outcome:** Not Applicable
+![Sanitized Submission Proof](./submission-proof-bb-business-logic-01.png)
 
 Target-identifying details and sensitive information have been redacted for portfolio use.
 
@@ -116,16 +115,6 @@ No real payment was attempted and no unauthorized transaction was created.
 - No destructive actions or real financial transactions were performed.
 - Downstream reservation validation prevented completion of the manipulated transaction.
 
-## Disclosure Status
 
-**Bug bounty outcome:** Not Applicable.
 
-The program determined that a reservation could not be completed with the negative value and therefore sufficient security impact was not demonstrated.
 
-This case is retained as a sanitized security research example demonstrating manual business-logic testing and end-to-end impact validation.
-
-## Key Takeaway
-
-This research demonstrates the importance of tracing business-logic manipulation beyond the initial abnormal response:
-
-**Identify the business rule → manipulate the input → observe server-side state → trace downstream workflow → validate final impact → distinguish confirmed impact from blocked exploitation.**

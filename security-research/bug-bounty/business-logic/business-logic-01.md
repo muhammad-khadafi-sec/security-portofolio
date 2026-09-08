@@ -8,8 +8,6 @@
 
 ![Sanitized Submission Proof](./submission-proof-bb-business-logic-01.png)
 
-Target-identifying details and sensitive information have been redacted for portfolio use.
-
 ## Summary
 
 A business logic weakness was identified in the hotel booking engine's room/rate calculation flow.
